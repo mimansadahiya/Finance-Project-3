@@ -70,8 +70,9 @@ Both models were evaluated on the chronological Test Set (2015–2018) with 287 
 | **Test PR-AUC** | 0.0555 | **0.0614** |
 | **Top 5% Risk Bucket Recall** | 14.29% (41 defaults caught) | **21.60%** (62 defaults caught) |
 | **Top 10% Risk Bucket Recall** | **31.71%** (91 defaults caught) | 31.36% (90 defaults caught) |
+| **Top 20% Risk Bucket Recall** | **56.45%** (162 defaults caught) | 45.99% (132 defaults caught) |
 
-* *Takeaway:* The baseline model shows the highest overall ranking power (ROC-AUC: 73.7%). However, the LASSO model performs significantly better at isolating the extreme high-risk cases (capturing 21.6% of defaults in the top 5% risk bucket compared to only 14.3% in the baseline model).
+* *Takeaway:* The baseline model shows the highest overall ranking power (ROC-AUC: 73.7%). While the LASSO model performs significantly better at isolating the extreme high-risk cases (capturing 21.6% of defaults in the top 5% risk bucket compared to only 14.3% in the baseline), the baseline model performs much better once the scope is widened to the top 20% (capturing 56.5% of all defaults vs. 46.0% for LASSO).
 
 ---
 
@@ -79,4 +80,4 @@ Both models were evaluated on the chronological Test Set (2015–2018) with 287 
 
 * **Altman Score Benchmark:** Implement an Altman Z-score proxy to serve as the baseline credit-risk benchmark.
 * **Machine Learning Models:** Train and tune Random Forest and XGBoost classifiers.
-* **Model Evaluation & Comparison:** Compare all models using ROC-AUC, PR-AUC, and Recall within the Top 5% and 10% risk buckets.
+* **Model Evaluation & Comparison:** Compare all models using ROC-AUC, PR-AUC, and Recall within the Top 5%, 10%, and 20% risk buckets.
